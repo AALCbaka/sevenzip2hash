@@ -35,6 +35,12 @@ Speed: 7z runs 2^numCyclesPower rounds of SHA-256 per candidate, measured at rou
 15,000 H/s on an RTX 5070. That is about six orders of magnitude slower than ZIP, so
 brute force is only realistic for short passwords.
 """
+# NOTE: this module also ships inside the hashcat-workbench GUI
+# (https://github.com/AALCbaka/hashcat-workbench, as hashcat_gui/sevenzip2hash.py).
+# Keep the parsing logic identical between the two copies. Only user-facing strings
+# differ: English here, Chinese there, to match each project's audience.
+
+
 import lzma
 import os
 
