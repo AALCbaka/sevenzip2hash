@@ -1,0 +1,15 @@
+# 统一换行符处理, 避免 Windows 下的 CRLF 污染仓库
+* text=auto
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.toml  text eol=lf
+
+# Windows 批处理必须保持 CRLF
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# 二进制
+*.7z    binary
+*.zip   binary
